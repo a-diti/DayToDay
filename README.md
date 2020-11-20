@@ -47,18 +47,18 @@ Framework – Spring, Hibernate
 
 API Endpoints
 
-         URL                         		Method	       PayLoad	          	Success Response
+         URL                         	   Method	         PayLoad	          	Success Response
 									
-	${base_ip}/v1/rating/add		 POST	      1.	patientId  	{
-                                                      	      2.	productName
-                                                      	      3.	rating	              "message": "Rating saved",
+	${base_ip}/v1/rating/add		  POST	      	 1.	patientId  	{
+                                                      	      	 2.	productName
+                                                      	      	 3.	rating	              "message": "Rating saved",
                                                                              			"status": "Success",
                                                                              			"data": null
                                                                           		}
                                                            
 																																																											
 
-	${base_ip}/v1/rating/update	         PUT	        1.	patientId         {
+	${base_ip}/v1/rating/update	           PUT	        1.	patientId         {
                                                   		2.	productName
                                                   		3.	rating	                 "message": "Rating Updaed",
                                                                               			 "status": "Success",
@@ -66,7 +66,7 @@ API Endpoints
                                                                            		   }
 
 
-	${base_ip}/v1/rating/fetch/productName	GET	                              	   {
+	${base_ip}/v1/rating/fetch/productName	   GET	                              	   {
                                                                              			"message": "Rating Fetched",
                                                                                			"status": "Success",
                                                                                 		 "data": {
