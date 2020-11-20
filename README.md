@@ -49,12 +49,12 @@ API Endpoints
 
          URL                         	   Method	         PayLoad	          	Success Response
 									
-	${base_ip}/v1/rating/add		  POST	      	 1.	patientId  	{
-                                                      	      	 2.	productName
-                                                      	      	 3.	rating	              "message": "Rating saved",
+	${base_ip}/v1/rating/add		  POST	      	1.   patientId  	    {
+                                                      	      	2.   productName
+                                                      	      	3.   rating	              "message": "Rating saved",
                                                                              			"status": "Success",
                                                                              			"data": null
-                                                                          		}
+                                                                          		     }
                                                            
 																																																											
 
@@ -69,15 +69,15 @@ API Endpoints
 	${base_ip}/v1/rating/fetch/productName	   GET	                              	   {
                                                                              			"message": "Rating Fetched",
                                                                                			"status": "Success",
-                                                                                		 "data": {
-                                                                                 		   "productName": "Mindfulness",
-                                                                                  		    "averageRating": 3,
-                                                                                   		    "totalRating": 3,
-                                                                                    		    "individualRating": {
-                                                                                                        "3": 1,
-                                                                                                        "4": 2
-                                                                                                        	      }
-                                                                                         		 }
+                                                                                		 	"data": {
+                                                                                 		   		"productName": "Mindfulness",
+                                                                                  		    		"averageRating": 3,
+                                                                                   		    		"totalRating": 3,
+                                                                                    		    		"individualRating": {
+                                                                                                       			 "3": 1,
+                                                                                                        		 "4": 2
+                                                                                                        	      		   }
+                                                                                         		 	}
                                                                             		     }
 
 
