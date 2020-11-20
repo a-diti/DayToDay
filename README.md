@@ -17,23 +17,23 @@ I have created a separate table to store Rating of particular product and linked
 To fetch Rating, I am taking Product name as request and fetching the data from database to return the result.
 
 
-Database
+  Database
 
-•	Ratings
+• Ratings
 
-Column	        DataType	              Description
+	Column	        		DataType	             		 Description
 
-RATING_ID	      Integer	                Unique identifier of the table
+	RATING_ID	      	   	Integer	                	Unique identifier of the table
 
-PATIENT_ID	    Integer	                Unique Identifier for the Patient who is giving rating
+	PATIENT_ID	   	        Integer	                Unique Identifier for the Patient who is giving rating
 
-PRODUCT_NAME	  String	                Name of the Product for which rating is given (Lab Test Order, Mindfulness, CarePlan, WellBeing, and COVID-19)
+	PRODUCT_NAME	  		String	                Name of the Product for which rating is given (Lab Test Order, Mindfulness, CarePlan, WellBeing, and COVID-19)
 
-RATING	        Integer	                Rating given for the product
+	RATING	        		Integer	                Rating given for the product
 
-CREATED_ON	  Timestamp	                Automatic generated date at the time of creation
+	CREATED_ON	  	      Timestamp	                Automatic generated date at the time of creation
 
-UPDATED_ON	  Timestamp	                Automatic generated last modified date
+	UPDATED_ON	              Timestamp	                Automatic generated last modified date
 
 
 Technology
@@ -47,37 +47,37 @@ Framework – Spring, Hibernate
 
 API Endpoints
 
-         URL                         	Method	       PayLoad	          Success Response
+         URL                         	Method	       PayLoad	          	Success Response
 									
-${base_ip}/v1/rating/add	            POST	      1.	patientId           {
-                                                  2.	productName
-                                                  3.	rating	              "message": "Rating saved",
-                                                                             "status": "Success",
-                                                                             "data": null
-                                                                          }
+	${base_ip}/v1/rating/add	 POST	      1.	patientId  	{
+                                                      2.	productName
+                                                      3.	rating	              "message": "Rating saved",
+                                                                             		"status": "Success",
+                                                                             		"data": null
+                                                                          	}
                                                            
 																																																											
 
-${base_ip}/v1/rating/update	         PUT	        1.	patientId            {
-                                                  2.	productName
-                                                  3.	rating	                 "message": "Rating Updaed",
-                                                                               "status": "Success",
-                                                                               "data": null
-                                                                            }
+	${base_ip}/v1/rating/update	         PUT	        1.	patientId            {
+                                                  		2.	productName
+                                                  		3.	rating	                 "message": "Rating Updaed",
+                                                                              			 "status": "Success",
+                                                                             			  "data": null
+                                                                           		    }
 
 
-${base_ip}/v1/rating/fetch/productName	GET	                              	{
-                                                                              "message": "Rating Fetched",
-                                                                               "status": "Success",
-                                                                                "data": {
-                                                                                   "productName": "Mindfulness",
-                                                                                    "averageRating": 3,
-                                                                                    "totalRating": 3,
-                                                                                    "individualRating": {
-                                                                                                       "3": 1,
+	${base_ip}/v1/rating/fetch/productName	GET	                              	   {
+                                                                             			"message": "Rating Fetched",
+                                                                               			"status": "Success",
+                                                                                		"data": {
+                                                                                 		  "productName": "Mindfulness",
+                                                                                  		  "averageRating": 3,
+                                                                                   		  "totalRating": 3,
+                                                                                    		  "individualRating": {
+                                                                                                        "3": 1,
                                                                                                         "4": 2
-                                                                                                        }
-                                                                                          }
-                                                                            }
+                                                                                                        	      }
+                                                                                         		 }
+                                                                            		     }
 
 
