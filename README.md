@@ -18,25 +18,37 @@ To fetch Rating, I am taking Product name as request and fetching the data from 
 
 
 Database
+
 •	Ratings
+
 Column	        DataType	              Description
 
 RATING_ID	      Integer	                Unique identifier of the table
+
 PATIENT_ID	    Integer	                Unique Identifier for the Patient who is giving rating
+
 PRODUCT_NAME	  String	                Name of the Product for which rating is given (Lab Test Order, Mindfulness, CarePlan, WellBeing, and COVID-19)
+
 RATING	        Integer	                Rating given for the product
+
 CREATED_ON	  Timestamp	                Automatic generated date at the time of creation
+
 UPDATED_ON	  Timestamp	                Automatic generated last modified date
 
 
 Technology
+
 Database – MySql
+
 Language – JAVA
+
 Framework – Spring, Hibernate
 
 
 API Endpoints
+
          URL                         	Method	       PayLoad	          Success Response
+									
 ${base_ip}/v1/rating/add	            POST	      1.	patientId           {
                                                   2.	productName
                                                   3.	rating	              "message": "Rating saved",
@@ -44,6 +56,7 @@ ${base_ip}/v1/rating/add	            POST	      1.	patientId           {
                                                                              "data": null
                                                                           }
                                                            
+																																																											
 
 ${base_ip}/v1/rating/update	         PUT	        1.	patientId            {
                                                   2.	productName
@@ -51,6 +64,7 @@ ${base_ip}/v1/rating/update	         PUT	        1.	patientId            {
                                                                                "status": "Success",
                                                                                "data": null
                                                                             }
+
 
 ${base_ip}/v1/rating/fetch/productName	GET	                              	{
                                                                               "message": "Rating Fetched",
